@@ -1,6 +1,6 @@
 
 const { spawn } = require('child_process');
-const run = spawn('./bin/pocketbase', ['serve', '--http', `127.0.0.1:${process.env.PORT || 8090}`]);
+const run = spawn('./bin/pocketbase', ['serve', '--http', `0.0.0.0:${process.env.PORT || 8090}`]);
 
 run.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
